@@ -24,8 +24,8 @@
       <tr *ngFor="let restaurant of restoDataService.restaurantsList">
         <th scope="row">{{restoDataService.restaurantsList.indexOf(restaurant) + 1}}</th>
         <td>{{restaurant.name}}</td>
-        <td>{{restaurant.address}}</td>
         <td>{{restaurant.email}}</td>
+        <td>{{restaurant.address}}</td>
         <td><a type="submit" class="btn btn-primary" routerLink="/update/{{restaurant.id}}">Update</a></td>
         <td><button type="submit" class="btn btn-primary" (click) = deleteRestaurant(restaurant)>Delete</button></td>
       </tr>
