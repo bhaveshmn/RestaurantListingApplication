@@ -1,0 +1,35 @@
+
+<!-- Alert After Data Deleted successfully-->
+<div class="alert alert-success alert-dismissible fade show" role="alert" *ngIf="showDeleteSuccessAlert">
+  <strong>Success </strong> Restaurant name {{ deletedRestaurantName }} has been Deleted Successfully
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+
+<!-- Alert After Data Updated successfully-->
+<div class="alert alert-success alert-dismissible fade show" role="alert" *ngIf="restoDataService.showUpdateSuccessAlert">
+  <strong>Success </strong> Restaurant name {{ restoDataService.updatedRestaurantName }} has been Updated Successfully
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close" (click)="closeUpdateSucessAlert()"></button>
+</div>
+
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Name</th>
+        <th scope="col">Address</th>
+        <th scope="col">Email</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let restaurant of restoDataService.restaurantsList">
+        <th scope="row">{{restoDataService.restaurantsList.indexOf(restaurant) + 1}}</th>
+        <td>{{restaurant.name}}</td>
+        <td>{{restaurant.address}}</td>
+        <td>{{restaurant.email}}</td>
+        <td><a type="submit" class="btn btn-primary" routerLink="/update/{{restaurant.id}}">Update</a></td>
+        <td><button type="submit" class="btn btn-primary" (click) = deleteRestaurant(restaurant)>Delete</button></td>
+      </tr>
+    </tbody>
+</table>
+
+  

@@ -1,0 +1,16 @@
+.navbar {
+    padding-left: 24px;
+}
+
+.router-outlet {
+    padding-left: 15px;
+}
+
+footer {
+    background-color: #aed5f6;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    padding-left: 10px;
+    padding-top: 15px;
+}
