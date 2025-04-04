@@ -48,11 +48,11 @@ export class UpdateRestoComponent implements OnInit {
     this.restoDataService.updateRestaurant(this.restaurantData.id, data).subscribe((result) => {
       console.log('Updated Successfully', result);
       this.showSuccessAlert = true;
+      this.router.navigate(['/list']);
     })
     this.updateRestoForm.reset();
     this.restoDataService.updatedRestaurantName = data.name;
-    this.restoDataService.showUpdateSuccessAlert = true;;
-    this.router.navigate(['/list']);
+    this.restoDataService.showUpdateSuccessAlert = true;
   }
 
 }
