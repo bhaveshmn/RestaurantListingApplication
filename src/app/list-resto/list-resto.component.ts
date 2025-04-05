@@ -17,6 +17,7 @@ export class ListRestoComponent implements OnInit {
       next: (restaurants) => {
         console.log('Data', restaurants);
         this.restoDataService.restaurantsList = restaurants;
+        this.restoDataService.filteredRestaurantsList = [...this.restoDataService.restaurantsList];
       },
       error: (error) => {
         console.log('Unable to get data', error);
@@ -28,6 +29,7 @@ export class ListRestoComponent implements OnInit {
     console.log(data);
     this.restoDataService.deleteRestaurant(data.id).subscribe(() => {
       this.restoDataService.restaurantsList.splice(this.restoDataService.restaurantsList.indexOf(data), 1);
+      this.restoDataService.filteredRestaurantsList = [...this.restoDataService.restaurantsList];
       this.deletedRestaurantName = data.name;
       console.log('Deleting Restaurant with name', data.name);
       console.log('Restaurant deleted successfully');

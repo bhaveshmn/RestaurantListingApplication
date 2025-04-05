@@ -22,6 +22,7 @@ export class RestoDataService {
   url = "https://factual-quilted-chime.glitch.me/restaurants";
 
   restaurantsList: RestaurantData[] = [];
+  filteredRestaurantsList: RestaurantData[] = [];
   updatedRestaurantName = '';
   showUpdateSuccessAlert = false;
 

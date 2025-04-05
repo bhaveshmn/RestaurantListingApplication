@@ -11,7 +11,7 @@
   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close" (click)="closeUpdateSucessAlert()"></button>
 </div>
 
-<table class="table">
+<table class="table table-striped">
     <thead>
       <tr>
         <th scope="col">#</th>
@@ -21,8 +21,8 @@
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let restaurant of restoDataService.restaurantsList">
-        <th scope="row">{{restoDataService.restaurantsList.indexOf(restaurant) + 1}}</th>
+      <tr *ngFor="let restaurant of restoDataService.filteredRestaurantsList">
+        <th scope="row">{{restoDataService.filteredRestaurantsList.indexOf(restaurant) + 1}}</th>
         <td>{{restaurant.name}}</td>
         <td>{{restaurant.email}}</td>
         <td>{{restaurant.address}}</td>
