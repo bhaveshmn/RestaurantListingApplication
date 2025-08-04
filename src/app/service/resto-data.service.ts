@@ -16,10 +16,10 @@ export class RestoDataService {
   // This api is local db.json api running on local system
   // url = 'http://localhost:3000/restaurants';
 
-  // This is a glitch platform api in which the json server is deployed
+  // This is a Render platform api in which the json server is deployed
   // so that vercel in which UI application is running can get the api data.
-  // url = "https://json-server-api-xe25.onrender.com/restaurants";
-  url = "https://factual-quilted-chime.glitch.me/restaurants";
+  url = "https://json-server-api-xe25.onrender.com/restaurants";
+  // url = "https://factual-quilted-chime.glitch.me/restaurants";
 
   restaurantsList: RestaurantData[] = [];
   filteredRestaurantsList: RestaurantData[] = [];
