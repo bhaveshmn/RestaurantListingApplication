@@ -3,7 +3,8 @@
 URL : https://restaurant-listing-application.vercel.app
 
 Tech Stack :
-UI - Angular, Typecript. Here user can add, update, delete retaurants and view them in table. Hhosted in Vercel Platform.
+UI - Angular, Typecript. Here user can add, update, delete retaurants and view them in table. Hosted in Vercel Platform.
+
 BE - Used Json server, hosted in Render Platform.
 
 ## Development server
